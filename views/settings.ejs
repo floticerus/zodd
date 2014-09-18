@@ -1,0 +1,55 @@
+<div class="mp-settings">
+	<h3>library</h3>
+
+	<div class="mp-dt-wrapper" style="height:150px;">
+		<div id="mp-settings-library" data-table="library-folder">
+			<table cellspacing="0" cellpadding="0" border="0" class="mp-dt mp-dt-head">
+				<thead class="mp-dt-head">
+					<tr>
+						<th data-table-column="folder" align="left">
+							<div class="mp-thead-th">folder</div>
+						</th>
+
+						<th data-table-column="action" style="width:70px;" align="left">
+							<div class="mp-thead-th">&nbsp;</div>
+						</th>
+					</tr>
+				</thead>
+			</table>
+
+			<div class="mp-dt-body mp-dt-alternate-rows">
+				<div class="mp-inner mp-scroll">
+					<table cellspacing="0" cellpadding="0" border="0" class="mp-dt">
+						<tbody>
+							<tr class="mp-dt-first-row">
+								<td></td>
+
+								<td></td>
+							</tr>
+
+							<% for ( var i = 0, l = libraryFolders.length; i < l; ++i ) { %>
+								<% include library-folder-row %>
+							<% } %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mp-button mp-file-button">
+		<label>
+			<span>add folder</span>
+
+			<input type="file" nwdirectory name="addtolibrary" />
+		</label>
+	</div>
+</div>
+
+<div>
+	<label>
+		<input type="checkbox" name="windowborder" <%= customWindowBorder ? 'checked' : '' %> />
+
+		<span>custom window border</span>
+	</label>
+</div>

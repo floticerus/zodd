@@ -1,0 +1,180 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>media player</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="HandheldFriendly" content="true" />
+
+		<link rel="stylesheet" href="lib/stylesheets/mpstyle.css" />
+
+		<script src="lib/javascripts/gator.js"></script>
+
+		<script src="lib/javascripts/mptable.js"></script>
+
+		<script src="lib/javascripts/mpclient.js"></script>
+	</head>
+
+	<body style="-webkit-app-region: drag;">
+		<audio id="mp-audio" autoplay></audio>
+
+		<div id="mp-titlebar">
+			<div id="mp-titlebar-buttons">
+				<div class="mp-inner">
+					<span class="mp-nodrag" id="mp-titlebar-minimize"></span>
+
+					<span class="mp-nodrag" id="mp-titlebar-maximize"></span>
+
+					<span class="mp-nodrag" id="mp-titlebar-close"></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="mp-nodrag" id="mp-main">
+			<div id="mp-top-panel" style="-webkit-app-region: drag;">
+				<div id="mp-controls">
+					<span id="mp-previous">&lsaquo;</span><span id="mp-playpause">&#9654;</span><span id="mp-next">&rsaquo;</span>
+				</div>
+
+				<div class="mp-nodrag" id="mp-menu-button">
+					<span class="mp-inner">=</span>
+				</div>
+			</div>
+
+			<div id="mp-content">
+				<!-- load modal contents with javascript -->
+				<div id="mp-modal"></div>
+
+				<div class="mp-inner">
+					<div class="mp-side-panel mp-side-panel-left">
+						<div id="mp-side-panel-search">
+							<div class="mp-input">
+								<input class="mp-auto-trim" data-context-menu="text" type="search" name="sidesearch" size="10" maxlength="100" placeholder="search library..." required />
+							</div>
+						</div>
+					</div>
+
+					<div id="mp-nav">
+						<div class="mp-inner">
+							<div id="mp-nav-top">
+								<div class="mp-inner">
+									<div data-table="artists" data-table-sort="artist" data-table-unique="true" id="mp-nav-top-left" class="mp-nav-top-item">
+										<table cellspacing="0" cellpadding="0" border="0" class="sortable mp-dt mp-dt-head">
+											<thead>
+												<tr>
+													<th data-table-click-sort="artist" align="left">
+														<div class="mp-thead-th">artists</div>
+													</th>
+												</tr>
+											</thead>
+										</table>
+
+										<div class="mp-dt-body">
+											<div class="mp-inner mp-scroll">
+												<table cellspacing="0" cellpadding="0" border="0" class="mp-dt">
+													<tbody id="mp-artists-tbody">
+														<tr class="mp-dt-first-row">
+															<td></td>
+														</tr>
+
+														<tr class="mp-dt-all">
+															<td>
+																&nbsp;
+
+																<div class="mp-tbody-td"><b>all 45 artists (432)</b></div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+
+									<div data-table="albums" data-table-sort="album" data-table-unique="true" id="mp-nav-top-right" class="mp-nav-top-item">
+										<table cellspacing="0" cellpadding="0" border="0" class="mp-dt mp-dt-head">
+											<thead>
+												<tr>
+													<th data-table-click-sort="album" align="left">
+														<div class="mp-thead-th">albums</div>
+													</th>
+												</tr>
+											</thead>
+										</table>
+
+										<div class="mp-dt-body">
+											<div class="mp-inner mp-scroll">
+												<table cellspacing="0" cellpadding="0" border="0" class="mp-dt">
+													<tbody id="mp-albums-tbody">
+														<tr class="mp-dt-first-row">
+															<td></td>
+														</tr>
+
+														<tr class="mp-dt-all">
+															<td>
+																&nbsp;
+
+																<div class="mp-tbody-td"><b>all 108 albums (432)</b></div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div data-table="songs" data-table-sort="artist album track title duration" id="mp-nav-bottom">
+								<table cellspacing="0" cellpadding="0" border="0" class="mp-dt mp-dt-head">
+									<thead>
+										<tr>
+											<th data-table-click-sort="track artist album title" style="width:30px">
+												<div class="mp-thead-th">#</div>
+											</th>
+
+											<th data-table-click-sort="title artist album track" style="width:40%">
+												<div class="mp-thead-th">title</div>
+											</th>
+
+											<th data-table-click-sort="artist album track title">
+												<div class="mp-thead-th">artist</div>
+											</th>
+
+											<th data-table-click-sort="album artist track title">
+												<div class="mp-thead-th">album</div>
+											</th>
+
+											<th data-table-click-sort="duration artist album track title" style="width:60px">
+												<div class="mp-thead-th">length</div>
+											</th>
+										</tr>
+									</thead>
+								</table>
+
+								<div class="mp-dt-body mp-dt-alternate-rows">
+									<div class="mp-inner mp-scroll">
+										<table cellspacing="0" cellpadding="0" border="0" class="mp-dt">
+											<tbody id="mp-songs-tbody">
+												<tr class="mp-dt-first-row">
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>;require( require( 'path' ).join( process.cwd(), 'index' ) )( window );</script>
+	</body>
+</html>
