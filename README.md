@@ -1,4 +1,4 @@
 zodd
 ====
 
-a nodejs media library
+a node-webkit media library
