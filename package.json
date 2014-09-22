@@ -1,6 +1,7 @@
 {
     "name": "zodd",
     "version": "0.0.0",
+    "description": "a node-webkit media library",
     "author": "Kevin von Flotow",
     "contributors": [
         {

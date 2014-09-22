@@ -18,8 +18,6 @@
 	</head>
 
 	<body style="-webkit-app-region: drag;">
-		<audio id="mp-audio" autoplay></audio>
-
 		<div id="mp-titlebar">
 			<div id="mp-titlebar-buttons">
 				<div class="mp-inner">
@@ -34,13 +32,13 @@
 
 		<div class="mp-nodrag" id="mp-main">
 			<div id="mp-top-panel" style="-webkit-app-region: drag;">
-				<div id="mp-controls">
+				<nav id="mp-controls">
 					<span id="mp-previous">&lsaquo;</span><span id="mp-playpause">&#9654;</span><span id="mp-next">&rsaquo;</span>
-				</div>
+				</nav>
 
-				<div class="mp-nodrag" id="mp-menu-button">
-					<span class="mp-inner">=</span>
-				</div>
+				<nav class="mp-nodrag" id="mp-menu-button">
+					<span class="mp-inner" title="open menu">=</span>
+				</nav>
 			</div>
 
 			<div id="mp-content">

@@ -3,6 +3,8 @@ zodd
 
 a node-webkit media library
 
+currently developing and testing for windows and linux. mac compatibility will come when i can test on a mac.
+
 ## license
 zodd - a node-webkit media library
 
