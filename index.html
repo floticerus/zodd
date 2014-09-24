@@ -33,7 +33,17 @@
 		<div class="mp-nodrag" id="mp-main">
 			<div id="mp-top-panel" style="-webkit-app-region: drag;">
 				<nav id="mp-controls">
-					<span id="mp-previous">&lsaquo;</span><span id="mp-playpause">&#9654;</span><span id="mp-next">&rsaquo;</span>
+					<div>
+						<span id="mp-previous">&lsaquo;</span><span id="mp-playpause">&#9654;</span><span id="mp-next">&rsaquo;</span>
+					</div>
+
+					<div class="mp-nodrag mp-selectable" id="mp-song-details">
+						<span><big>artist</big></span> <span><small>title</small></span> <span><small>time</small></span>
+					</div>
+
+					<div class="mp-nodrag" id="mp-seekbar">
+						<input id="mp-seekbar-input" type="range" min="0" max="100" value="0" step="0.1" />
+					</div>
 				</nav>
 
 				<nav class="mp-nodrag" id="mp-menu-button">
