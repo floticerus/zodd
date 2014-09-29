@@ -235,7 +235,7 @@ body.mp-maximized #mp-content
 	padding: 4px;
 }
 
-.mp-input input[name=sidesearch]
+#mp-sidesearch
 {
 	width: 100%;
 	margin-top: -2px;
@@ -245,7 +245,7 @@ body.mp-maximized #mp-content
 	transition: border-color 0.25s, background-color 0.25s, box-shadow 0.25s
 }
 
-.mp-input input[name=sidesearch]:focus
+#mp-sidesearch:focus
 {
 	background-color: rgba( 255, 255, 255, 0.9 );
 	border-color: rgba( 100, 170, 200, 0.8 );
@@ -381,8 +381,56 @@ body.mp-maximized #mp-content
 	position: absolute;
 	left: 120px;
 	right: 50px;
-	bottom: 7px;
+	bottom: 5px;
 	height: 12px;
+}
+
+.mp-slider
+{
+	-webkit-appearance: none;
+	width: 100%;
+	height: 100%;
+}
+
+.mp-slider::-webkit-progress-inner-element
+{
+	padding: 3px;
+}
+
+.mp-slider::-webkit-progress-bar
+{
+	background-color: rgb( 66, 66, 66 );
+	border: 1px solid rgb( 12, 12, 12 );
+	border-radius: 3px;
+}
+
+.mp-slider::-webkit-progress-value
+{
+	position: relative;
+	background: rgb( 100, 170, 200 );
+	border-radius: 3px;
+}
+
+.mp-slider::-webkit-progress-value:after
+{
+	content: '';
+	display: block;
+	position: absolute;
+	top: -4px;
+	right: -6px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: rgb( 200, 200, 200 );
+	border: 1px solid rgb( 12, 12, 12 );
+	opacity: 0;
+	-webkit-transition: opacity 0.25s;
+}
+
+.mp-slider:hover::-webkit-progress-value:after,
+.mp-slider-active::-webkit-progress-value:after
+{
+	opacity: 1;
 }
 
 #mp-seekbar input[type=range]
@@ -399,7 +447,7 @@ body.mp-maximized #mp-content
 	outline: none;
 	width: 100%;
 	height: 100%;
-	margin: 0 -6px;
+	margin: 0 -5px;
 	position: relative;
 }
 
@@ -411,8 +459,8 @@ body.mp-maximized #mp-content
 	z-index: 0;
 	top: 3px;
 	bottom: 3px;
-	left: 6px;
-	right: 6px;
+	left: 4px;
+	right: 4px;
 	background-color: rgb( 66, 66, 66 );
 	border: 1px solid rgb( 12, 12, 12 );
 	border-radius: 3px;
@@ -426,10 +474,10 @@ body.mp-maximized #mp-content
 	border: 1px solid rgba( 50, 120, 150, 0.9 );
 	outline: none;
 	background: rgba( 100, 170, 200, 0.9 );
-	width: 12px;
-	height: 12px;
+	width: 10px;
+	height: 10px;
 	border-radius: 50%;
-	margin-top: 0px;
+	margin-top: 1px;
 }
 
 input[type=range]:focus

@@ -42,7 +42,9 @@
 					</div>
 
 					<div class="mp-nodrag" id="mp-seekbar">
-						<input id="mp-seekbar-input" type="range" min="0" max="100" value="0" step="0.1" />
+						<progress id="mp-seekbar-progress" class="mp-slider" max="100" value="0"></progress>
+
+						<!-- <input id="mp-seekbar-input" type="range" min="0" max="100" value="0" step="0.1" /> -->
 					</div>
 				</nav>
 
@@ -59,7 +61,7 @@
 					<div class="mp-side-panel mp-side-panel-left">
 						<div id="mp-side-panel-search">
 							<div class="mp-input">
-								<input class="mp-auto-trim" data-context-menu="text" type="search" name="sidesearch" size="10" maxlength="100" placeholder="search library..." required />
+								<input id="mp-sidesearch" class="mp-auto-trim" data-context-menu="text" type="search" size="10" maxlength="100" placeholder="search library..." required />
 							</div>
 						</div>
 					</div>
