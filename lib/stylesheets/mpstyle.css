@@ -645,15 +645,10 @@ input[type=range]:focus
 	/* transition: background-color 0.15s; */
 }
 
-.mp-dt-body.mp-dt-alternate-rows tr:nth-child(even)
+.mp-dt-alternate-rows .mp-dt-row-even
 {
 	background-color: rgba( 0, 0, 0, 0.025 );
 }
-
-/*.mp-dt-tr-hidden
-{
-	display: none;
-}*/
 
 /* table row mouseover */
 .mp-dt-body tr:hover
