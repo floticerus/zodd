@@ -20,6 +20,6 @@
         "fluent-ffmpeg": "2.0.0-rc2",
         "nbqueue": "0.0.5",
         "mime": "1.2.11",
-        "chokidar": "0.8.4"
+        "chokidar": "0.9.0"
     }
 }
