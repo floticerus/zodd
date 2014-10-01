@@ -10,6 +10,8 @@
 
 		<link rel="stylesheet" href="lib/stylesheets/mpstyle.css" />
 
+		<script>;require( require( 'path' ).join( process.cwd(), 'index' ) )( window );</script>
+
 		<script src="lib/javascripts/gator.js"></script>
 
 		<script src="lib/javascripts/mptable.js"></script>
@@ -17,8 +19,8 @@
 		<script src="lib/javascripts/mpclient.js"></script>
 	</head>
 
-	<body style="-webkit-app-region: drag;">
-		<div id="mp-titlebar">
+	<body class=""> <!-- class="mp-custom-frame" -->
+		<div id="mp-titlebar" style="-webkit-app-region: drag;">
 			<div id="mp-titlebar-buttons">
 				<div class="mp-inner">
 					<span class="mp-nodrag" id="mp-titlebar-minimize"></span>
@@ -30,7 +32,7 @@
 			</div>
 		</div>
 
-		<div class="mp-nodrag" id="mp-main">
+		<div id="mp-main">
 			<div id="mp-top-panel" style="-webkit-app-region: drag;">
 				<nav id="mp-controls">
 					<div>
@@ -185,6 +187,6 @@
 			</div>
 		</div>
 
-		<script>;require( require( 'path' ).join( process.cwd(), 'index' ) )( window );</script>
+		
 	</body>
 </html>
